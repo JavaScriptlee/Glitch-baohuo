@@ -121,10 +121,10 @@ function executeCurlCommand(command) {
 
 async function baohuo() {
   const curlCommands = [
-    // 
-    'curl -u admin:password https://1your-workers.workers.dev/start',
-    'curl -u admin:password https://2your-workers.workers.dev/start',
-    // 添加更多curl命令
+    // 下面的your1-workers.workers.dev 应该改成你另外一个项目的反代域名，两个项目互相保活
+    'curl -u admin:password https://your1-workers.workers.dev/start',
+    'curl -u admin:password https://your2-workers.workers.dev/start',
+    // 复制上面的命令，可以添加更多
   ];
 
   try {
@@ -137,12 +137,8 @@ async function baohuo() {
     console.error(`至少有一个命令执行错误: ${error}`);
   }
 }
-
-// 每隔60秒执行一次保活函数
+// 每隔5分钟执行一次保活函数
 setInterval(baohuo, 5 * 60000);
-
-
-
 
 // keepalive begin
 //web保活
