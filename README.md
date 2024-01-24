@@ -31,7 +31,7 @@ async function baohuo() {
   }
 }
 
-// 每隔60秒执行一次保活函数
+// 每隔5分钟执行一次保活函数
 setInterval(baohuo, 5 * 60000);
 
 
