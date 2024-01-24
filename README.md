@@ -14,9 +14,9 @@ function executeCurlCommand(command) {
 
 async function baohuo() {
   const curlCommands = [
-    // 
-    'curl -u admin:password https://1your-workers.workers.dev/start',
-    'curl -u admin:password https://2your-workers.workers.dev/start',
+    // 下面的your-workers.workers.dev 应该改成你另外一个项目的反代域名，两个项目互相保活
+    'curl -u admin:password https://your-workers.workers.dev/start',
+    'curl -u admin:password https://her-workers.workers.dev/start',
     // 添加更多curl命令
   ];
 
